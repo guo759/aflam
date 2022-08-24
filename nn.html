@@ -130,7 +130,24 @@
                 }
             },
         });
-    </script>
+  
+   </script>
+    
+    const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://webtor.p.rapidapi.com/resource/08ada5a7a6183aae1e09d831df6748d566095a10/export/ca2453df3e7691c28934eebed5a253ee0aabd29f",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "d31e6da730msh17d0603411021d7p16357djsn48e32366313f",
+		"X-RapidAPI-Host": "webtor.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+    
 </body>
 
 </html>
