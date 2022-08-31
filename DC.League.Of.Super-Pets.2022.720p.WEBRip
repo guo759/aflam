@@ -1,1 +1,169 @@
-%3C!doctype%20html%3E%0A%3Chtml%3E%0A%0A%3Chead%3E%0A%20%20%20%20%3Ctitle%3E%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D8%A7%D9%84%D8%A7%D9%81%D9%84%D8%A7%D9%85%3C%2Ftitle%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22RTL%22%3E%0A%20%20%20%20%3Cmeta%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%20name%3D%22viewport%22%3E%0A%20%20%20%20%3Cmeta%20content%3D%22ie%3Dedge%22%20http-equiv%3D%22x-ua-compatible%22%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20html%2C%20body%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20overflow%3A%20hidden%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%7D%0A%09%20%20%20%20%0A%20%20%20.mejs__embed-button%20button%20%7B%0A%20%20%20%20background%3A%20none%3B%0A%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20font-size%3A%20.8rem%3B%0A%20%20%20%20white-space%3A%20nowrap%3B%0A%20%20%20%20letter-spacing%3A%20.1rem%3B%0A%20%20%20%20transform%3A%20scaleY(1.8)%3B%0A%20%20%20%20overflow%3A%20visible%3B%0A%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20left%3A%20-0.2rem%3B%0A%20%20%20%20display%3A%20none%3B%0A%7D%0A%20%20%20%20%20%20%20%20%23player%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%23controls%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%201rem%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%23controls%20i%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding-top%3A%200.3rem%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20display%3A%20block%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20.control%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding-right%3A%201rem%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%23files%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%200.5rem%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%23files%20a%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%200.5rem%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%20%20%3C!--%20%3Cscript%20src%3D%22..%2F..%2Fdist%2Findex.min.js%22%20charset%3D%22utf-8%22%20async%3E%3C%2Fscript%3E%20--%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2F%40webtor%2Fembed-sdk-js%2Fdist%2Findex.min.js%22%20charset%3D%22RTL%22%20async%3E%3C%2Fscript%3E%0A%3C%2Fhead%3E%0A%0A%3Cbody%3E%0A%0A%20%20%20%20%3Cdiv%20id%3D%22player%22%3E%3C%2Fdiv%3E%0A%20%20%20%20%3Cdiv%20id%3D%22files%22%3E%3C%2Fdiv%3E%20%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20var%20el%20%3D%20document.getElementById('player')%3B%0A%20%20%20%20%20%20%20%20window.webtor%20%3D%20window.webtor%20%7C%7C%20%5B%5D%3B%0A%20%20%20%20%20%20%20%20window.webtor.push(%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20id%3A%20'player'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20baseUrl%3A%20'https%3A%2F%2Fwebtor.io'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20baseUrl%3A%20'http%3A%2F%2F192.168.0.100%3A4000'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20magnet%3A%20'magnet%3A%3Fxt%3Durn%3Abtih%3A400538f31363c6c3b8cf6aa0fb88c92aa75ecae8%26dn%3DDC%2BLeague%2BOf%2BSuper-Pets%2B(2022)%2B%255B720p%255D%2B%255BWEBRip%255D%2B%255BYTS.MX%255D%26tr%3Dudp%253A%252F%252Ftracker.opentrackr.org%253A1337%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.leechers-paradise.org%253A6969%252Fannounce%26tr%3Dudp%253A%252F%252F9.rarbg.to%253A2710%252Fannounce%26tr%3Dudp%253A%252F%252Fp4p.arenabg.ch%253A1337%252Fannounce%26tr%3Dudp%253A%252F%252Ftracker.cyberia.is%253A6969%252Fannounce%26tr%3Dhttp%253A%252F%252Fp4p.arenabg.com%253A1337%252Fannounce%26tr%3Dudp%253A%252F%252Fopen.tracker.cl%253A1337%252Fannounce'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20title%3A%20'DC%20League%20Of%20Super-Pets%20(2022)%20%5B720p%5D'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20poster%3A%20'https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BM2QwZjM3OTgtZmI5Zi00NGVkLWFiZmMtNGI1ZTkwMGI2NWE4XkEyXkFqcGdeQXVyMTkxNjUyNQ%40%40._V1_FMjpg_UX1000_.jpg'%2C%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20subtitles%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20srclang%3A%20'AR'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20label%3A%20'%D8%AA%D8%B1%D8%AC%D9%85%D8%A9%20%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20src%3A%20'https%3A%2F%2Fraw.githubusercontent.com%2Fguo759%2Faflamlab%2Fmain%2FDC.League.of.Super-Pets.2022.1080p.TELESYNC.x265-iDiOTS.srt'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20default%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%20'100%25'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20'100%25'%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20features%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20autoSubtitles%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20continue%3A%20%20%20%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20title%3A%20%20%20%20%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p2pProgress%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20subtitles%3A%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20settings%3A%20%20%20%20%20%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20fullscreen%3A%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20playpause%3A%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20currentTime%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timeline%3A%20%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20duration%3A%20%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20volume%3A%20%20%20%20%20%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20chromecast%3A%20%20false%2C%0A%09%09%20%20%20%20download%3A%20false%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20on%3A%20function(e)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.TORRENT_FETCHED)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log('Torrent%20fetched!'%2C%20e.data.files)%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20p%20%3D%20e.player%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20files%20%3D%20document.getElementById('files')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20for%20(const%20f%20of%20e.data.files)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(!f.name.endsWith('.mp4'))%20continue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20a%20%3D%20document.createElement('a')%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20a.setAttribute('href'%2C%20f.path)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20a.innerText%20%3D%20f.name%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20files.appendChild(a)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20a.addEventListener('click'%2C%20function(e)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20e.preventDefault()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p.open(e.target.getAttribute('href'))%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.TORRENT_ERROR)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log('Torrent%20error!')%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.INITED)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20p%20%3D%20e.player%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('play').addEventListener('click'%2C%20function(ev)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p.play()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('pause').addEventListener('click'%2C%20function(ev)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p.pause()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('moveto1min').addEventListener('click'%2C%20function(ev)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p.setPosition(60)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('movetostart').addEventListener('click'%2C%20function(ev)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20p.setPosition(0)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.PLAYER_STATUS)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('player-status').innerHTML%20%3D%20e.data%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.OPEN)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log(e.data)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.CURRENT_TIME)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('current-time').innerHTML%20%3D%20parseInt(e.data)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.DURATION)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById('duration').innerHTML%20%3D%20parseInt(e.data)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(e.name%20%3D%3D%20window.webtor.OPEN_SUBTITLES)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log(e.data)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%7D)%3B%0A%20%20%0A%20%20%20%3C%2Fscript%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20const%20settings%20%3D%20%7B%0A%09%22async%22%3A%20true%2C%0A%09%22crossDomain%22%3A%20true%2C%0A%09%22url%22%3A%20%22https%3A%2F%2Fwebtor.p.rapidapi.com%2Fresource%2F08ada5a7a6183aae1e09d831df6748d566095a10%2Fexport%2Fca2453df3e7691c28934eebed5a253ee0aabd29f%22%2C%0A%09%22method%22%3A%20%22GET%22%2C%0A%09%22headers%22%3A%20%7B%0A%09%09%22X-RapidAPI-Key%22%3A%20%22d31e6da730msh17d0603411021d7p16357djsn48e32366313f%22%2C%0A%09%09%22X-RapidAPI-Host%22%3A%20%22webtor.p.rapidapi.com%22%0A%09%7D%0A%7D%3B%0A%0A%24.ajax(settings).done(function%20(response)%20%7B%0A%09console.log(response)%3B%0A%7D)%3B%0A%3C%2Fscript%3E%20%20%20%20%0A%3C%2Fbody%3E%0A%0A%3C%2Fhtml%3E
+<!doctype html>
+<html>
+
+<head>
+    <title>مكتبة الافلام</title>
+    <meta charset="RTL">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+	    
+   .mejs__embed-button button {
+    background: none;
+    color: #fff;
+    font-size: .8rem;
+    white-space: nowrap;
+    letter-spacing: .1rem;
+    transform: scaleY(1.8);
+    overflow: visible;
+    position: relative;
+    left: -0.2rem;
+    display: none;
+}
+        #player {
+            height: 100%;
+        }
+        #controls {
+            padding: 1rem;
+        }
+        #controls i {
+            padding-top: 0.3rem;
+            display: block;
+        }
+        .control {
+            padding-right: 1rem;
+        }
+        #files {
+            padding: 0.5rem;
+        }
+        #files a {
+            padding: 0.5rem;
+        }
+    </style>
+    <!-- <script src="../../dist/index.min.js" charset="utf-8" async></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="RTL" async></script>
+</head>
+
+<body>
+
+    <div id="player"></div>
+    <div id="files"></div> 
+    <script>
+        var el = document.getElementById('player');
+        window.webtor = window.webtor || [];
+        window.webtor.push({
+            id: 'player',
+            // baseUrl: 'https://webtor.io',
+            // baseUrl: 'http://192.168.0.100:4000',
+            magnet: 'magnet:?xt=urn:btih:400538f31363c6c3b8cf6aa0fb88c92aa75ecae8&dn=DC+League+Of+Super-Pets+(2022)+%5B720p%5D+%5BWEBRip%5D+%5BYTS.MX%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce',
+            title: 'DC League Of Super-Pets (2022) [720p]',
+            poster: 'https://m.media-amazon.com/images/M/MV5BM2QwZjM3OTgtZmI5Zi00NGVkLWFiZmMtNGI1ZTkwMGI2NWE4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg',
+        
+            subtitles: [
+                {
+                    srclang: 'AR',
+                   label: 'ترجمة عربية',
+                  src: 'https://raw.githubusercontent.com/guo759/aflamlab/main/DC.League.of.Super-Pets.2022.1080p.TELESYNC.x265-iDiOTS.srt',
+                     default: true,
+                 },
+            ],
+            width: '100%',
+            height: '100%',
+            features: {
+                autoSubtitles: true,
+                continue:      true,
+                 title:       true,
+               p2pProgress: false,
+               subtitles:   true,
+                settings:      false,
+               fullscreen:  true,
+               playpause:   true,
+              currentTime: true,
+                timeline:    true,
+                duration:    true,
+                    volume:      true,
+                 chromecast:  false,
+		    download: false,
+            },
+            on: function(e) {
+                if (e.name == window.webtor.TORRENT_FETCHED) {
+                    console.log('Torrent fetched!', e.data.files);
+
+                    var p = e.player;
+                    var files = document.getElementById('files');
+                    for (const f of e.data.files) {
+                        if (!f.name.endsWith('.mp4')) continue;
+                        var a = document.createElement('a');
+                        a.setAttribute('href', f.path);
+                        a.innerText = f.name;
+                        files.appendChild(a);
+                        a.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            p.open(e.target.getAttribute('href'));
+                            return false;
+                        });
+                    }
+                }
+                if (e.name == window.webtor.TORRENT_ERROR) {
+                    console.log('Torrent error!')
+                }
+                if (e.name == window.webtor.INITED) {
+                    var p = e.player;
+                    document.getElementById('play').addEventListener('click', function(ev) {
+                        p.play();
+                    });
+                    document.getElementById('pause').addEventListener('click', function(ev) {
+                        p.pause();
+                    });
+                    document.getElementById('moveto1min').addEventListener('click', function(ev) {
+                        p.setPosition(60);
+                    });
+                    document.getElementById('movetostart').addEventListener('click', function(ev) {
+                        p.setPosition(0);
+                    });
+                }
+                if (e.name == window.webtor.PLAYER_STATUS) {
+                    document.getElementById('player-status').innerHTML = e.data;
+                }
+                if (e.name == window.webtor.OPEN) {
+                    console.log(e.data);
+                }
+                if (e.name == window.webtor.CURRENT_TIME) {
+                    document.getElementById('current-time').innerHTML = parseInt(e.data);
+                }
+                if (e.name == window.webtor.DURATION) {
+                    document.getElementById('duration').innerHTML = parseInt(e.data);
+                }
+                if (e.name == window.webtor.OPEN_SUBTITLES) {
+                    console.log(e.data);
+                }
+            },
+        });
+  
+   </script>
+    <script>
+    const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://webtor.p.rapidapi.com/resource/08ada5a7a6183aae1e09d831df6748d566095a10/export/ca2453df3e7691c28934eebed5a253ee0aabd29f",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "d31e6da730msh17d0603411021d7p16357djsn48e32366313f",
+		"X-RapidAPI-Host": "webtor.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+</script>    
+</body>
+
+</html>
