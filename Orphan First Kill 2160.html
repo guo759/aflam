@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>luck.2022.720p.ATVP.WEBRip.800MB.x264</title>
+    <meta charset="RTL">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+	    
+        #player {
+            height: 100%;
+        }
+        #controls {
+            padding: 1rem;
+        }
+        #controls i {
+            padding-top: 0.3rem;
+            display: block;
+        }
+        .control {
+            padding-right: 1rem;
+        }
+        #files {
+            padding: 0.5rem;
+        }
+        #files a {
+            padding: 0.5rem;
+        }
+    </style>
+    <!-- <script src="../../dist/index.min.js" charset="utf-8" async></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="RTL" async></script>
+</head>
+
+<body>
+
+    <div id="player"></div>
+    <div id="files"></div> 
+    <script>
+        var el = document.getElementById('player');
+        window.webtor = window.webtor || [];
+        window.webtor.push({
+            id: 'player',
+            // baseUrl: 'https://webtor.io',
+            // baseUrl: 'http://192.168.0.100:4000',
+            magnet: 'magnet:?xt=urn:btih:f219a1215a59d5fc3104ac69fa1a84775e1c2908&dn=Orphan+First+Kill+(2022)+%5B2160p%5D+%5B4K%5D+%5BWEB%5D+%5B5.1%5D+%5BYTS.MX%5D',
+            title: 'Orphan First Kill (2022) [2160p] [4K] [WEB] [5.1]',
+            poster: 'https://m.media-amazon.com/images/M/MV5BZjM5ZmI3ZTEtODJhYS00ZjMyLWFiYjItN2QzNGE4YzY0MjA4XkEyXkFqcGdeQXVyNDgyNzAxMzY@._V1_FMjpg_UX1000_.jpg',
+        
+            subtitles: [
+                {
+                    srclang: 'AR',
+                   label: 'ترجمة أحمد محمد, متوافقة مع النسخة 01:38:25',
+                  src: 'https://raw.githubusercontent.com/guo759/aflamlab/main/OrphanFirstKill2022V2Arabic.srt',
+                     default: true,
+                 },
+            ],
+            width: '100%',
+            height: '100%',
+            features: {
+                autoSubtitles: true,
+                continue:      true,
+                 title:       true,
+               p2pProgress: false,
+               subtitles:   true,
+                settings:      false,
+               fullscreen:  true,
+               playpause:   true,
+              currentTime: true,
+                timeline:    true,
+                duration:    true,
+                    volume:      true,
+                 chromecast:  false,
+		    download: false,
+            },
+            on: function(e) {
+                if (e.name == window.webtor.TORRENT_FETCHED) {
+                    console.log('Torrent fetched!', e.data.files);
+
+                    var p = e.player;
+                    var files = document.getElementById('files');
+                    for (const f of e.data.files) {
+                        if (!f.name.endsWith('.mp4')) continue;
+                        var a = document.createElement('a');
+                        a.setAttribute('href', f.path);
+                        a.innerText = f.name;
+                        files.appendChild(a);
+                        a.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            p.open(e.target.getAttribute('href'));
+                            return false;
+                        });
+                    }
+                }
+                if (e.name == window.webtor.TORRENT_ERROR) {
+                    console.log('Torrent error!')
+                }
+                if (e.name == window.webtor.INITED) {
+                    var p = e.player;
+                    document.getElementById('play').addEventListener('click', function(ev) {
+                        p.play();
+                    });
+                    document.getElementById('pause').addEventListener('click', function(ev) {
+                        p.pause();
+                    });
+                    document.getElementById('moveto1min').addEventListener('click', function(ev) {
+                        p.setPosition(60);
+                    });
+                    document.getElementById('movetostart').addEventListener('click', function(ev) {
+                        p.setPosition(0);
+                    });
+                }
+                if (e.name == window.webtor.PLAYER_STATUS) {
+                    document.getElementById('player-status').innerHTML = e.data;
+                }
+                if (e.name == window.webtor.OPEN) {
+                    console.log(e.data);
+                }
+                if (e.name == window.webtor.CURRENT_TIME) {
+                    document.getElementById('current-time').innerHTML = parseInt(e.data);
+                }
+                if (e.name == window.webtor.DURATION) {
+                    document.getElementById('duration').innerHTML = parseInt(e.data);
+                }
+                if (e.name == window.webtor.OPEN_SUBTITLES) {
+                    console.log(e.data);
+                }
+            },
+        });
+  
+   </script>
+    <script>
+    const settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://webtor.p.rapidapi.com/resource/08ada5a7a6183aae1e09d831df6748d566095a10/export/ca2453df3e7691c28934eebed5a253ee0aabd29f",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "d31e6da730msh17d0603411021d7p16357djsn48e32366313f",
+		"X-RapidAPI-Host": "webtor.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+</script>    
+</body>
+
+</html>
