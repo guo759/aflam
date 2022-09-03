@@ -3,7 +3,7 @@
 
 <head>
     <title>مكتبة الافلام</title>
-    <meta charset="RTL">
+    <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <style>
@@ -14,19 +14,6 @@
             width: 100%;
             height: 100%;
         }
-	    
-   .mejs__embed-button button {
-    background: none;
-    color: #fff;
-    font-size: .8rem;
-    white-space: nowrap;
-    letter-spacing: .1rem;
-    transform: scaleY(1.8);
-    overflow: visible;
-    position: relative;
-    left: -0.2rem;
-    display: none;
-}
         #player {
             height: 100%;
         }
@@ -48,11 +35,10 @@
         }
     </style>
     <!-- <script src="../../dist/index.min.js" charset="utf-8" async></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="RTL" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="utf-8" async></script>
 </head>
 
 <body>
-
     <div id="player"></div>
     <div id="files"></div> 
     <script>
@@ -65,32 +51,31 @@
             magnet: 'magnet:?xt=urn:btih:401d6f54ff1d919a17961ef186de1a3d5ac681aa&dn=See.S03E02.1080p.WEB.H264-GGEZ%5Brarbg%5D&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2990%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2820%2Fannounce&tr=udp%3A%2F%2Ftracker.slowcheetah.org%3A14720%2Fannounce&tr=udp%3A%2F%2Ftracker.tallpenguin.org%3A15800%2Fannounce',
             title: 'See.S03E02.1080p.WEB.H264',
             poster: 'https://m.media-amazon.com/images/M/MV5BYjRmZjI2ODktYWRmYy00ODRlLWI4NmItMzIyNTQ3ODZmNDgwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg',
-        
             subtitles: [
                 {
                     srclang: 'AR',
-                   label: 'ترجمة عربية',
+                 label: 'ترجمة عربية',
                   src: 'https://raw.githubusercontent.com/guo759/aflamlab/main/80752.S01E02.480p.srt',
                      default: true,
+
                  },
             ],
             width: '100%',
             height: '100%',
             features: {
                 autoSubtitles: true,
-                continue:      true,
-                 title:       true,
-               p2pProgress: false,
-               subtitles:   true,
+                continue:      false,
+                // title:       false,
+                // p2pProgress: false,
+                // subtitles:   false,
                 settings:      false,
-               fullscreen:  true,
-               playpause:   true,
-              currentTime: true,
-                timeline:    true,
-                duration:    true,
-                    volume:      true,
-                 chromecast:  false,
-		    download: false,
+                // fullscreen:  false,
+                // playpause:   false,
+                // currentTime: false,
+                // timeline:    false,
+                // duration:    false,
+                // volume:      false,
+                // chromecast:  false,
             },
             on: function(e) {
                 if (e.name == window.webtor.TORRENT_FETCHED) {
@@ -146,24 +131,7 @@
                 }
             },
         });
-  
-   </script>
-    <script>
-    const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://webtor.p.rapidapi.com/resource/08ada5a7a6183aae1e09d831df6748d566095a10/export/ca2453df3e7691c28934eebed5a253ee0aabd29f",
-	"method": "GET",
-	"headers": {
-		"X-RapidAPI-Key": "d31e6da730msh17d0603411021d7p16357djsn48e32366313f",
-		"X-RapidAPI-Host": "webtor.p.rapidapi.com"
-	}
-};
-
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
-</script>    
+    </script>
 </body>
 
 </html>
